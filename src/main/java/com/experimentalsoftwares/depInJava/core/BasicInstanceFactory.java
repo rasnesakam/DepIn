@@ -22,13 +22,13 @@ public class BasicInstanceFactory {
         } catch (ClassCastException e){
             throw new ClassBuildException("Given class has no relation with provided class",e);
         }
-        T instance;
+        T instance = null;
 
         if(hasConstroctor(cls)){
             analyzer = new CtorAnalyzer();
             builder = new CTorInjector();
             Class[] classes = analyzer.getDependencies(cls);
-            for(Class c : classes) generateInstance(cls);
+            for(Class c : classes) generateInstance(cls.getName());
             instance = builder.build(cls,()->classes);
         }
 
