@@ -1,4 +1,4 @@
-package com.experimentalsoftwares.depInJava.annotations;
+package com.experimentalsoftwares.depInJava.utils.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
