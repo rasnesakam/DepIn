@@ -13,6 +13,14 @@ test {
     useJUnitPlatform()
 }
 
+sourceSets{
+    test{
+        resources{
+            srcDir "src/test/resources/"
+        }
+    }
+}
+
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     implementation 'org.junit.jupiter:junit-jupiter:5.4.2'

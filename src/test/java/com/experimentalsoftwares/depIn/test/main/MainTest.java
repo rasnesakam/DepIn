@@ -1,22 +1,28 @@
 package com.experimentalsoftwares.depIn.test.main;
 
-import com.experimentalsoftwares.depInJava.core.BasicInstanceFactory;
-import com.experimentalsoftwares.depInJava.utils.classBuilders.concretes.CTorInjector;
-import com.experimentalsoftwares.depInJava.utils.classBuilders.concretes.FieldInjector;
-import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
+import org.json.JSONArray;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.*;
+import java.util.Scanner;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
 
     @Test
     public void test1() {
-        BasicInstanceFactory factory = new BasicInstanceFactory();
+
         try {
-            ExampleClass exampleClass = factory.generateInstance(ExampleClass.class.getName());
-        } catch (ClassBuildException e) {
+            String str = "";
+            Scanner scanner = new Scanner(new FileInputStream("src/test/resources/map.json"));
+            while (scanner.hasNextLine()) str = str.concat(scanner.nextLine());
+
+            JSONArray array = new JSONArray(str);
+
+            System.out.println(array.getJSONObject(0).toString());
+
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
