@@ -2,6 +2,7 @@ package com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.jso
 
 import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ArgumentMap;
 import org.json.JSONObject;
+import static com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonKeys.ArgumentKeys.*;
 
 public class JsonArgumentMap implements ArgumentMap {
 

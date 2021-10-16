@@ -7,7 +7,7 @@ import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.Cons
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import static com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonKeys.ConstructorKeys.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +17,6 @@ public class JsonConstructorMap implements ConstructorMap {
     private final List<ArgumentMap> argumentMaps;
 
     public JsonConstructorMap(JSONObject jsonObject){
-        String TAG = "tag", ARGS = "args";
         try{
             this.tag = jsonObject.getString(TAG);
 

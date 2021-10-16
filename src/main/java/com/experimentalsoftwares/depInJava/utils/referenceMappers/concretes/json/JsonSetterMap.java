@@ -2,6 +2,7 @@ package com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.jso
 
 import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ArgumentMap;
 import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.SetterMap;
+import static com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonKeys.SetterKeys.*;
 import org.json.JSONObject;
 
 public class JsonSetterMap implements SetterMap {

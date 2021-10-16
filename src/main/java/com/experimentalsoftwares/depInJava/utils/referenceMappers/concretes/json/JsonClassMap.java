@@ -1,6 +1,5 @@
 package com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json;
 
-import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
 import com.experimentalsoftwares.depInJava.utils.exceptions.JsonParserException;
 import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ClassMap;
 import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ConstructorMap;
@@ -9,13 +8,11 @@ import com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.Sett
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
+import static com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonKeys.ClassKeys.*;
 
 public class JsonClassMap implements ClassMap {
-
-
 
     private final String id;
     private final String referenceClassName;
@@ -25,13 +22,6 @@ public class JsonClassMap implements ClassMap {
     private final List<SetterMap> setterMaps;
 
     public JsonClassMap(JSONObject jsonObject) {
-        String
-                ID = "id",
-                REFERENCE = "reference",
-                TARGET = "target",
-                FIELDS = "fields",
-                CONSTRUCTORS = "constructors",
-                SETTERS = "setters";
 
         try{
             this.id = jsonObject.getString(ID);
