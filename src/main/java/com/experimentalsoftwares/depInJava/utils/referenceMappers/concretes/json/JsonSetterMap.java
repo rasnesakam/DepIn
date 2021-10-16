@@ -6,17 +6,19 @@ import org.json.JSONObject;
 
 public class JsonSetterMap implements SetterMap {
 
-    public JsonSetterMap(JSONObject jsonObject){
+    private String setterName;
+    private ArgumentMap arg;
 
+    public JsonSetterMap(JSONObject jsonObject){
     }
 
     @Override
     public String getSetterName() {
-        return null;
+        return this.setterName;
     }
 
     @Override
     public ArgumentMap getArg() {
-        return null;
+        return this.arg;
     }
 }
