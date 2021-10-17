@@ -1,24 +1,45 @@
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/ArgumentMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ArgumentMap
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/ClassMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ClassMap
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/FieldMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.FieldMap
-com/experimentalsoftwares/depInJava/utils/annotations/Inject.java
- com.experimentalsoftwares.depInJava.utils.annotations.Inject
-com/experimentalsoftwares/depInJava/utils/referenceResolvers/abstracts/ReferenceResolver.java
- com.experimentalsoftwares.depInJava.utils.referenceResolvers.abstracts.ReferenceResolver
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/ClassMaps.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ClassMaps
 com/experimentalsoftwares/depInJava/utils/annotations/Dependent.java
  com.experimentalsoftwares.depInJava.utils.annotations.Dependent
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/ConstructorMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.ConstructorMap
-com/experimentalsoftwares/depInJava/utils/referenceMappers/abstracts/SetterMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.abstracts.SetterMap
-com/experimentalsoftwares/depInJava/utils/referenceMappers/concretes/json/JsonClassMap.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonClassMap
-com/experimentalsoftwares/depInJava/utils/referenceMappers/concretes/json/JsonClassMaps.java
- com.experimentalsoftwares.depInJava.utils.referenceMappers.concretes.json.JsonClassMaps
+com/experimentalsoftwares/depInJava/utils/annotations/Inject.java
+ com.experimentalsoftwares.depInJava.utils.annotations.Inject
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonKeys.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys$ArgumentKeys
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys$ClassKeys
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys$ConstructorKeys
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys$FieldKeys
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonKeys$SetterKeys
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonFieldMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonFieldMap
+com/experimentalsoftwares/depInJava/utils/resolvers/ClassHolder.java
+ com.experimentalsoftwares.depInJava.utils.resolvers.ClassHolder
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ConstructorMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ConstructorMap
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/SetterMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.SetterMap
+com/experimentalsoftwares/depInJava/utils/resolvers/MapResolver.java
+ com.experimentalsoftwares.depInJava.utils.resolvers.MapResolver
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonClassMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonClassMap
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonConstructorMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonConstructorMap
+com/experimentalsoftwares/depInJava/utils/exceptions/ResolverException.java
+ com.experimentalsoftwares.depInJava.utils.exceptions.ResolverException
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonSetterMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonSetterMap
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonArgumentMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonArgumentMap
+com/experimentalsoftwares/depInJava/utils/exceptions/JsonParserException.java
+ com.experimentalsoftwares.depInJava.utils.exceptions.JsonParserException
+com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonClassMaps.java
+ com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonClassMaps
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ClassMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMap
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/FieldMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.FieldMap
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ArgumentMap.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ArgumentMap
 com/experimentalsoftwares/depInJava/utils/exceptions/ClassBuildException.java
  com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException
+com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ClassMaps.java
+ com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMaps

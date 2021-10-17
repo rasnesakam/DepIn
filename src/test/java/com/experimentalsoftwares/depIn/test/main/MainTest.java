@@ -13,17 +13,26 @@ public class MainTest {
     @Test
     public void test1() {
 
-        try {
-            String str = "";
-            Scanner scanner = new Scanner(new FileInputStream("src/test/resources/map.json"));
-            while (scanner.hasNextLine()) str = str.concat(scanner.nextLine());
+        if(a() && b());
+        System.out.println("finished : &&");
 
-            JSONArray array = new JSONArray(str);
+        if(a() & b());
+        System.out.println("finished : &");
 
-            System.out.println(array.getJSONObject(0).toString());
+        if(a() || b());
+        System.out.println("finished : ||");
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
+        if(a() | b());
+        System.out.println("finished : |");
+    }
+
+    public boolean a(){
+        System.out.println("executed: a");
+        return false;
+    }
+    public boolean b(){
+        System.out.println("executed: b");
+        return false;
     }
 }
