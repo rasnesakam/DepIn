@@ -19,7 +19,13 @@ public interface ClassMaps {
     List<ClassMap> getClassMaps();
 
     default List<ClassMap> getClassMapsBy(Predicate<ClassMap> predicate){
-        return getClassMaps().stream().filter(predicate).collect(Collectors.toList());
+        return getClassMaps().parallelStream().filter(predicate).collect(Collectors.toList());
     }
-
+    default ClassMap getClassMapBy(Predicate<ClassMap> predicate){
+        ClassMap[] map = new ClassMap[1];
+        getClassMaps().parallelStream().forEach(cm -> {
+            if(predicate.test(cm)) map[0] = cm;
+        });
+        return map[0];
+    }
 }
