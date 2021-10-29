@@ -1,5 +1,6 @@
 package com.experimentalsoftwares.depIn.test.main;
 
+import com.experimentalsoftwares.depInJava.utils.builders.concretes.CtorInjector;
 import org.json.JSONArray;
 import org.junit.jupiter.api.Test;
 
@@ -13,26 +14,8 @@ public class MainTest {
     @Test
     public void test1() {
 
-        if(a() && b());
-        System.out.println("finished : &&");
-
-        if(a() & b());
-        System.out.println("finished : &");
-
-        if(a() || b());
-        System.out.println("finished : ||");
 
 
-        if(a() | b());
-        System.out.println("finished : |");
     }
 
-    public boolean a(){
-        System.out.println("executed: a");
-        return false;
-    }
-    public boolean b(){
-        System.out.println("executed: b");
-        return false;
-    }
 }

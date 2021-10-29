@@ -16,6 +16,9 @@ public class ExampleClass {
 
     public ExampleClass(){}
 
+    public void setDependency(String dependency) {
+        this.dependency = dependency;
+    }
     public String getDependency() {
         return dependency;
     }

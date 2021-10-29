@@ -8,20 +8,16 @@ public class MapResolver {
 
     private ClassMaps classMaps;
 
-    public ClassHolder resolve(ClassMap classMap){
+    /**
+     *
+     * @param classMap map of the requested
+     * @return Array of {@link Class} arrays that length of 3. First element is target,
+     */
+    public ClassBundle resolve(ClassMap classMap){
+         ClassBundle bundle = new ClassBundle();
         try{
-            Class target = Class.forName(classMap.getTargetClassName());
-            ClassHolder[] holders;
-            if(classMap.getConstructor() != null){
+            Class targetClass = Class.forName(classMap.getTargetClassName());
 
-
-            }
-            else if (classMap.getSetters().size() > 0){
-
-            }
-            else if (classMap.getFields().size() > 0){
-
-            }
         }
         catch (Exception e){
             throw new ResolverException("This map couldn't resolved. ",e);
@@ -29,10 +25,10 @@ public class MapResolver {
         return null;
     }
 
-    public ClassHolder resolveById(){
+    public ClassBundle resolveById(){
         return null;
     }
-    public ClassHolder resolveByReference(){
+    public ClassBundle resolveByReference(){
         return null;
     }
 }

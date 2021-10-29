@@ -4,6 +4,6 @@ package com.experimentalsoftwares.depInJava.utils.mappers.abstracts;
 //TODO XmlArgumentMap'i implement et
 public interface ArgumentMap {
     String getRefer();
-    String getTargetId();
+    String getFromId();
     String getValue();
 }
