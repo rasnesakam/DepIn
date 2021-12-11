@@ -8,12 +8,16 @@ public class ExampleClass {
     @Dependent
     private String dependency;
 
-    @Inject
+    @Dependent
+    private String secretString;
+
+
     public ExampleClass(String dependency){
         System.out.println("Injected");
         this.dependency = dependency;
     }
 
+    @Inject
     public ExampleClass(){}
 
     public void setDependency(String dependency) {
@@ -21,5 +25,18 @@ public class ExampleClass {
     }
     public String getDependency() {
         return dependency;
+    }
+
+
+    public String getSecretString() {
+        return secretString;
+    }
+
+    @Override
+    public String toString() {
+        return "ExampleClass{" +
+                "dependency='" + dependency + '\'' +
+                ", secretString='" + secretString + '\'' +
+                '}';
     }
 }

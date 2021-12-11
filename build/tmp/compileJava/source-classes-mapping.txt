@@ -13,8 +13,8 @@ com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ConstructorMap.java
  com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ConstructorMap
 com/experimentalsoftwares/depInJava/utils/mappers/abstracts/SetterMap.java
  com.experimentalsoftwares.depInJava.utils.mappers.abstracts.SetterMap
-com/experimentalsoftwares/depInJava/utils/resolvers/MapResolver.java
- com.experimentalsoftwares.depInJava.utils.resolvers.MapResolver
+com/experimentalsoftwares/depInJava/utils/annotations/Dependent.java
+ com.experimentalsoftwares.depInJava.utils.annotations.Dependent
 com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ClassMaps.java
  com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMaps
 com/experimentalsoftwares/depInJava/utils/mappers/concretes/json/JsonClassMap.java
@@ -37,13 +37,27 @@ com/experimentalsoftwares/depInJava/utils/mappers/abstracts/FieldMap.java
  com.experimentalsoftwares.depInJava.utils.mappers.abstracts.FieldMap
 com/experimentalsoftwares/depInJava/utils/mappers/abstracts/ArgumentMap.java
  com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ArgumentMap
-com/experimentalsoftwares/depInJava/utils/resolvers/ClassBundle.java
- com.experimentalsoftwares.depInJava.utils.resolvers.ClassBundle
 com/experimentalsoftwares/depInJava/utils/exceptions/ClassBuildException.java
  com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException
-com/experimentalsoftwares/depInJava/utils/annotations/Dependent.java
- com.experimentalsoftwares.depInJava.utils.annotations.Dependent
-com/experimentalsoftwares/depInJava/utils/builders/concretes/CtorInjector.java
- com.experimentalsoftwares.depInJava.utils.builders.concretes.CtorInjector
-com/experimentalsoftwares/depInJava/utils/builders/abstracts/InstanceBuilder.java
- com.experimentalsoftwares.depInJava.utils.builders.abstracts.InstanceBuilder
+com/experimentalsoftwares/depInJava/utils/builders/InstanceBuilder.java
+ com.experimentalsoftwares.depInJava.utils.builders.InstanceBuilder
+com/experimentalsoftwares/depInJava/utils/exceptions/InjectionException.java
+ com.experimentalsoftwares.depInJava.utils.exceptions.InjectionException
+com/experimentalsoftwares/depInJava/utils/resolvers/ClassMapsResolver.java
+ com.experimentalsoftwares.depInJava.utils.resolvers.ClassMapsResolver
+com/experimentalsoftwares/depInJava/utils/builders/InstanceCreator.java
+ com.experimentalsoftwares.depInJava.utils.builders.InstanceCreator
+com/experimentalsoftwares/depInJava/utils/builders/SetterInjector.java
+ com.experimentalsoftwares.depInJava.utils.builders.SetterInjector
+com/experimentalsoftwares/depInJava/utils/builders/InstanceGenerator.java
+ com.experimentalsoftwares.depInJava.utils.builders.InstanceGenerator
+com/experimentalsoftwares/depInJava/core/InstanceBuilder.java
+ com.experimentalsoftwares.depInJava.core.InstanceBuilder
+com/experimentalsoftwares/depInJava/utils/builders/FieldInjector.java
+ com.experimentalsoftwares.depInJava.utils.builders.FieldInjector
+com/experimentalsoftwares/depInJava/utils/builders/Injector.java
+ com.experimentalsoftwares.depInJava.utils.builders.Injector
+com/experimentalsoftwares/depInJava/core/DepIn.java
+ com.experimentalsoftwares.depInJava.core.DepIn
+ com.experimentalsoftwares.depInJava.core.DepIn$IOC
+ com.experimentalsoftwares.depInJava.core.DepIn$InstanceBuilder
