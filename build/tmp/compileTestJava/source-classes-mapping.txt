@@ -1,7 +1,0 @@
-com/experimentalsoftwares/depIn/test/main/ExampleClass.java
- com.experimentalsoftwares.depIn.test.main.ExampleClass
-com/experimentalsoftwares/depIn/test/main/SuperClass.java
- com.experimentalsoftwares.depIn.test.main.ExtendedClass
- com.experimentalsoftwares.depIn.test.main.SuperClass
-com/experimentalsoftwares/depIn/test/main/MainTest.java
- com.experimentalsoftwares.depIn.test.main.MainTest

@@ -1,5 +1,8 @@
 package com.experimentalsoftwares.depInJava.core;
 
+import com.experimentalsoftwares.depInJava.utils.builders.FieldInjector;
+import com.experimentalsoftwares.depInJava.utils.builders.InstanceCreator;
+import com.experimentalsoftwares.depInJava.utils.builders.SetterInjector;
 import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
 
 import java.util.Map;
@@ -35,22 +38,21 @@ public class InstanceBuilder<T> {
     }
 
     public T build(){
-        /**
-         * Create instance
-         * inject fields if exists
-         * inject setters if exists
-         */
-
-        /*
-
-        T instance = createInstance(deps);
-        if(fields != null) injectFields(instance, fields);
-        if(setters != null) injectSetters(instance, setters);
-        if(instance != null){
-            return instance;
+        T instance = new InstanceCreator<T>()
+                .withArgs(deps)
+                .create();
+        if (fields != null){
+            new FieldInjector()
+                    .withInstance(instance)
+                    .withMap(fields)
+                    .inject();
         }
-
-         */
-        throw new ClassBuildException("Instance couldn't created. Couldn't find constructor annotated by Inject annotation");
+        if (setters != null){
+            new SetterInjector()
+                    .withInstance(instance)
+                    .withMap(setters)
+                    .inject();
+        }
+        return instance;
     }
 }
