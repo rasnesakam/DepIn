@@ -1,14 +1,14 @@
 
-<class id="example" className="com.experimentalsoftwares.depIn.test.main.ExampleClass">
+<class id="example" className="com.experimentalsoftwares.depIn.test.cases.classes.ExampleClass">
 
     <fields>
-        <field name="fName" val="val" refId="refit" ref="com.experimentalsoftwares.depIn.test.main.SuperClass" />
+        <field name="fName" val="val" refId="refit" ref="com.experimentalsoftwares.depIn.test.cases.classes.SuperClass" />
     </fields>
     <constructorArgs>
         <ctorArg val="" refId="" ref="" />
     </constructorArgs>
     <setters>
-        <setter name="setDep" val="val" refId="refit" ref="com.experimentalsoftwares.depIn.test.main.SuperClass"/>
+        <setter name="setDep" val="val" refId="refit" ref="com.experimentalsoftwares.depIn.test.cases.classes.SuperClass"/>
     </setters>
 
 </class>

@@ -1,4 +1,4 @@
-package com.experimentalsoftwares.depIn.test.main;
+package com.experimentalsoftwares.depIn.test.cases.classes;
 
 import com.experimentalsoftwares.depInJava.utils.annotations.Dependent;
 import com.experimentalsoftwares.depInJava.utils.annotations.Inject;

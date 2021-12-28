@@ -21,6 +21,8 @@ public class InstanceCreator<T> {
     }
 
     public T create(){
+        if (cls == null)
+            throw new ClassBuildException("Target class must be specified");
         Constructor<T> constructor = getConstructor(args);
         try {
             return constructor.newInstance(args);

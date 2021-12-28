@@ -1,4 +1,4 @@
-package com.experimentalsoftwares.depIn.test.main;
+package com.experimentalsoftwares.depIn.test.cases.classes;
 
 public class SuperClass {
 }

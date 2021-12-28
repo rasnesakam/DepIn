@@ -39,6 +39,7 @@ public class InstanceBuilder<T> {
 
     public T build(){
         T instance = new InstanceCreator<T>()
+                .withClass(cls)
                 .withArgs(deps)
                 .create();
         if (fields != null){
