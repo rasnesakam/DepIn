@@ -5,11 +5,11 @@ import com.experimentalsoftwares.depInJava.utils.annotations.Inject;
 
 public class ExampleClass {
 
-    @Dependent
     private String dependency;
 
-    @Dependent
     private String secretString;
+
+    public String publicDependency;
 
 
     public ExampleClass(String dependency){
@@ -17,7 +17,6 @@ public class ExampleClass {
         this.dependency = dependency;
     }
 
-    @Inject
     public ExampleClass(){}
 
     public void setDependency(String dependency) {

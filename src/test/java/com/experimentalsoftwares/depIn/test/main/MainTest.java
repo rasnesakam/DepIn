@@ -2,12 +2,17 @@ package com.experimentalsoftwares.depIn.test.main;
 
 import com.experimentalsoftwares.depIn.test.cases.abstractClasses.ExampleAbstractClass;
 import com.experimentalsoftwares.depIn.test.cases.classes.EmptyClass;
+import com.experimentalsoftwares.depIn.test.cases.classes.ExampleClass;
 import com.experimentalsoftwares.depIn.test.cases.enums.ExampleEnum;
 import com.experimentalsoftwares.depIn.test.cases.interfaces.ExampleInterface;
 import com.experimentalsoftwares.depIn.test.cases.recordClasses.ExampleRecord;
 import com.experimentalsoftwares.depInJava.core.InstanceBuilder;
 import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,5 +93,50 @@ public class MainTest {
         assertNotNull(emptyClass,"Created instance is null");
     }
 
+    @Test
+    public void testConstructor(){
+        ExampleClass ec = InstanceBuilder.init(ExampleClass.class).withArgs("Selam").build();
+        assertNotNull(ec,"Object is null");
+        assertNotNull(ec.getDependency());
+        assertEquals("Selam", ec.getDependency(),"Example class dependency is wrong!");
+    }
+
+    @Test
+    public void testPrivateFields(){
+        Map<String,Object> fieldsMap = new HashMap<>();
+        fieldsMap.put("dependency","Selam");
+        fieldsMap.put("secretString","gizli");
+
+        ExampleClass ec = InstanceBuilder.init(ExampleClass.class).withFields(fieldsMap).build();
+
+        assertNotNull(ec,"Object is null");
+        assertNotNull(ec.getDependency());
+        assertNotNull(ec.getSecretString());
+        assertEquals("Selam", ec.getDependency(),"Example class dependency is wrong!");
+        assertEquals("gizli", ec.getSecretString(),"Example class dependency is wrong!");
+    }
+
+    @Test
+    public void testPublicFields(){
+        Map<String,Object> fieldsMap = new HashMap<>();
+        fieldsMap.put("publicDependency","Selam");
+
+        ExampleClass ec = InstanceBuilder.init(ExampleClass.class).withFields(fieldsMap).build();
+
+        assertNotNull(ec,"Object is null");
+        assertNotNull(ec.publicDependency);
+        assertEquals("Selam", ec.publicDependency,"Example class dependency is wrong!");
+    }
+
+    @Test
+    public void testSetterInjection(){
+        Map<String,Object> setterMap = new TreeMap<>();
+        setterMap.put("setDependency","Selam");
+        ExampleClass ec = InstanceBuilder.init(ExampleClass.class).withSetters(setterMap).build();
+
+        assertNotNull(ec,"Object is null");
+        assertNotNull(ec.getDependency());
+        assertEquals("Selam", ec.getDependency(),"Example class dependency is wrong!");
+    }
 
 }

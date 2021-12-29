@@ -12,23 +12,19 @@ import java.util.Map;
 public class FieldInjector extends Injector {
 
     @Override
-    public boolean inject(){
-        // TODO inject
+    public void inject(){
 
-        Class cls = instance.getClass();
+        Class<?> cls = instance.getClass();
 
         map.forEach((key,obj)->{
             try {
                 Field f = cls.getDeclaredField(key);
-                boolean isPrivate = !f.canAccess(instance);
                 if (f.trySetAccessible()){
                     f.set(instance,obj);
                 }
-                if (isPrivate) f.setAccessible(false);
             } catch (NoSuchFieldException | IllegalAccessException e) {
                 e.printStackTrace();
             }
         });
-        return false;
     }
 }

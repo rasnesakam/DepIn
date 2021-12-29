@@ -14,5 +14,5 @@ public abstract class Injector {
         this.instance = instance;
         return this;
     }
-    public abstract boolean inject();
+    public abstract void inject();
 }

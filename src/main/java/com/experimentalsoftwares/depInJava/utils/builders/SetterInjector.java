@@ -7,9 +7,8 @@ import java.util.Map;
 public class SetterInjector extends Injector {
 
     @Override
-    public boolean inject(){
-        // TODO inject setters
-        Class cls = instance.getClass();
+    public void inject(){
+        Class<?> cls = instance.getClass();
 
         map.forEach((key,val)->{
             try {
@@ -19,7 +18,6 @@ public class SetterInjector extends Injector {
                 e.printStackTrace();
             }
         });
-        return false;
     }
 
 }
