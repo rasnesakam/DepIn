@@ -1,0 +1,41 @@
+[
+  {
+    "id": "parent",
+    "name": "com.example.SomeClass",
+    "fields": [
+      {
+        "name": "dependency",
+        "value": "SomeValue"
+      }
+    ]
+  },
+  {
+    "id": "child",
+    "name": "com.example.Child",
+    "fields": [
+      {
+        "name": "depArg",
+        "value": "@parent"
+      }
+    ]
+  },
+  {
+    "ref": "com.example.SuperClass",
+    "target": "com.example.ExampleClass",
+    "args": ["@parent","@child"]
+  },
+  {
+    "id": "example",
+    "target": "com.example.ExampleClass",
+    "set": [
+      {
+        "name": "fieldName",
+        "value": "value"
+      },
+      {
+        "name": "fieldName",
+        "value": "@refSomeClass"
+      }
+    ]
+  }
+]

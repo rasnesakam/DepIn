@@ -6,6 +6,7 @@ import com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMaps;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class JsonClassMaps implements ClassMaps {
             }
             return maps;
         }
-        catch (JSONException exception){
+        catch (JSONException  exception){
             throw JsonParserException.invalidJsonString(exception);
         }
 

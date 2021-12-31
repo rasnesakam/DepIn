@@ -1,6 +1,6 @@
 [
   {
-    "id": "example",
+    "name": "example",
     "reference": "com.experimentalsoftwares.abstracts.SomeClass",
     "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
     "fields": [
@@ -12,7 +12,12 @@
           "value": ""
         }
       }
-    ],
+    ]
+  },
+  {
+    "name": "example",
+    "reference": "com.experimentalsoftwares.abstracts.SomeClass",
+    "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
     "constructors": [
       {
         "tag": "default",
@@ -24,7 +29,12 @@
           }
         ]
       }
-    ],
+    ]
+  },
+  {
+    "name": "example",
+    "reference": "com.experimentalsoftwares.abstracts.SomeClass",
+    "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
     "setters": [
       {
         "setterName": "setDep",

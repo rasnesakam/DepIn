@@ -1,27 +1,24 @@
 package com.experimentalsoftwares.depIn.test.cases.classes;
 
-import com.experimentalsoftwares.depInJava.utils.annotations.Dependent;
-import com.experimentalsoftwares.depInJava.utils.annotations.Inject;
-
 public class ExampleClass {
 
-    private String dependency;
+    private final String  dependency;
 
     private String secretString;
 
     public String publicDependency;
 
-
     public ExampleClass(String dependency){
         System.out.println("Injected");
+        System.out.println(dependency);
         this.dependency = dependency;
     }
-
-    public ExampleClass(){}
 
     public void setDependency(String dependency) {
-        this.dependency = dependency;
+        System.out.println("Setter injected");
+        //this.dependency = dependency;
     }
+
     public String getDependency() {
         return dependency;
     }

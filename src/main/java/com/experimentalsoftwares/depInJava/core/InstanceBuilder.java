@@ -4,6 +4,8 @@ import com.experimentalsoftwares.depInJava.utils.builders.FieldInjector;
 import com.experimentalsoftwares.depInJava.utils.builders.InstanceCreator;
 import com.experimentalsoftwares.depInJava.utils.builders.SetterInjector;
 import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -18,7 +20,8 @@ public class InstanceBuilder<T> {
     }
 
     // Chain methods
-    public static <C> InstanceBuilder<C> init(Class<C> clss){
+    @Contract(value = "_ -> new", pure = true)
+    public static <C> @NotNull InstanceBuilder<C> init(Class<C> clss){
         return new InstanceBuilder<C>(clss);
     }
 
