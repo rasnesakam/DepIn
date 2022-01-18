@@ -22,7 +22,9 @@
   {
     "ref": "com.example.SuperClass",
     "target": "com.example.ExampleClass",
-    "args": ["@parent","@child"]
+    "args": [
+      "@parent","#com.example.SuperClass",":String/some string text",":Integer/10"
+    ]
   },
   {
     "id": "example",
@@ -30,11 +32,15 @@
     "set": [
       {
         "name": "fieldName",
-        "value": "value"
+        "value": ":String/value"
       },
       {
         "name": "fieldName",
-        "value": "@refSomeClass"
+        "value": "@someId"
+      },
+      {
+        "name": "fieldName",
+        "value": "#referenceClass"
       }
     ]
   }

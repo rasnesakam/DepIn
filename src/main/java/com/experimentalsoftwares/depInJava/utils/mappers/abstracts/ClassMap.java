@@ -1,6 +1,7 @@
 package com.experimentalsoftwares.depInJava.utils.mappers.abstracts;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <h1>ClassMap</h1>
@@ -12,11 +13,27 @@ import java.util.List;
  * @since 02/09/2021
  */
 //TODO XmlClassMap'i implement et
-public interface ClassMap {
-    String getId();
-    String getReferenceClassName();
-    String getTargetClassName();
-    ConstructorMap getConstructor();
-    List<FieldMap> getFields();
-    List<SetterMap> getSetters();
+//TODO Builder design ile şaap
+public class ClassMap {
+    public final String id,name,target;
+    public final List<String> args;
+    public final Map<String,String> fields;
+    public final Map<String,String> setters;
+
+
+    protected ClassMap(
+            String id,
+            String name,
+            String target,
+            List<String> args,
+            Map<String,String> fields,
+            Map<String, String> setters
+    ) {
+        this.id = id;
+        this.name = name;
+        this.target = target;
+        this.args = args;
+        this.fields = fields;
+        this.setters = setters;
+    }
 }
