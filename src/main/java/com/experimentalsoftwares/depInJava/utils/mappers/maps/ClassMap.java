@@ -1,4 +1,4 @@
-package com.experimentalsoftwares.depInJava.utils.mappers.abstracts;
+package com.experimentalsoftwares.depInJava.utils.mappers.maps;
 
 import java.util.List;
 import java.util.Map;

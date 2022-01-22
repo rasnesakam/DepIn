@@ -1,7 +1,7 @@
 package com.experimentalsoftwares.depInJava.utils.resolvers;
 
-import com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMap;
-import com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMaps;
+import com.experimentalsoftwares.depInJava.utils.mappers.maps.ClassMap;
+import com.experimentalsoftwares.depInJava.utils.mappers.maps.ClassMaps;
 
 public class ClassMapsResolver {
     public ClassMaps maps;

@@ -1,12 +1,11 @@
 package com.experimentalsoftwares.depInJava.core;
 
 import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
-import com.experimentalsoftwares.depInJava.utils.mappers.abstracts.ClassMaps;
-import com.experimentalsoftwares.depInJava.utils.mappers.concretes.json.JsonClassMaps;
+import com.experimentalsoftwares.depInJava.utils.mappers.maps.ClassMaps;
+import com.experimentalsoftwares.depInJava.utils.mappers.keys.json.JsonClassMaps;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class ClassMapContext {
     private static final String
