@@ -11,4 +11,7 @@ public class JsonParserException extends RuntimeException{
     public static JsonParserException invalidJsonObject(Exception e){
         return new JsonParserException("Invalid JSON object. Object doesn't have requested keys",e);
     }
+    public static JsonParserException withCustomMessage(String message){
+        return new JsonParserException(message,null);
+    }
 }

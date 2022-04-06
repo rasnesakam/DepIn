@@ -8,15 +8,16 @@ public class ExampleClass {
 
     public String publicDependency;
 
+    public ExampleClass(){
+        this.dependency = "undefined";
+    }
+
     public ExampleClass(String dependency){
-        System.out.println("Injected");
-        System.out.println(dependency);
         this.dependency = dependency;
     }
 
-    public void setDependency(String dependency) {
-        System.out.println("Setter injected");
-        //this.dependency = dependency;
+    public void setSecretString(String secretString) {
+        this.secretString = secretString;
     }
 
     public String getDependency() {

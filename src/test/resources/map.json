@@ -1,48 +1,14 @@
 [
   {
-    "name": "example",
-    "reference": "com.experimentalsoftwares.abstracts.SomeClass",
-    "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
+    "id": "example",
+    "target": "com.experimentalsoftwares.depIn.test.cases.classes.ExampleClass",
+    "args": [":s/Hello World"],
     "fields": [
       {
-        "fieldName": "ref",
-        "arg": {
-          "refer": "",
-          "fromId": "",
-          "value": ""
-        }
-      }
-    ]
-  },
-  {
-    "name": "example",
-    "reference": "com.experimentalsoftwares.abstracts.SomeClass",
-    "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
-    "constructors": [
+        "secretString": ":s/Secret dependency"
+      },
       {
-        "tag": "default",
-        "args": [
-          {
-            "refer": "com.example.Class",
-            "fromId": "",
-            "value": "value"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "example",
-    "reference": "com.experimentalsoftwares.abstracts.SomeClass",
-    "target": "com.experimentalsoftwares.depIn.test.main.ExampleClass",
-    "setters": [
-      {
-        "setterName": "setDep",
-        "arg": {
-          "refer": "com.example.Class",
-          "fromId": "",
-          "value": "value"
-        }
+        "publicDependency": ":s/Public dependency"
       }
     ]
   }

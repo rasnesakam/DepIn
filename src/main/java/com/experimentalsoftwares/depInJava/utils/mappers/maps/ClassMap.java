@@ -15,7 +15,7 @@ import java.util.Map;
 //TODO XmlClassMap'i implement et
 //TODO Builder design ile şaap
 public class ClassMap {
-    public final String id,name,target;
+    public final String id,ref,target;
     public final List<String> args;
     public final Map<String,String> fields;
     public final Map<String,String> setters;
@@ -23,17 +23,19 @@ public class ClassMap {
 
     protected ClassMap(
             String id,
-            String name,
+            String ref,
             String target,
             List<String> args,
             Map<String,String> fields,
             Map<String, String> setters
     ) {
         this.id = id;
-        this.name = name;
+        this.ref = ref;
         this.target = target;
         this.args = args;
         this.fields = fields;
         this.setters = setters;
     }
+
+
 }

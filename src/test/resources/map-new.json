@@ -1,7 +1,7 @@
 [
   {
     "id": "parent",
-    "name": "com.example.SomeClass",
+    "target": "com.example.SomeClass",
     "fields": [
       {
         "name": "dependency",
@@ -11,7 +11,7 @@
   },
   {
     "id": "child",
-    "name": "com.example.Child",
+    "target": "com.example.Child",
     "fields": [
       {
         "name": "depArg",
@@ -23,7 +23,14 @@
     "ref": "com.example.SuperClass",
     "target": "com.example.ExampleClass",
     "args": [
-      "@parent","#com.example.SuperClass",":String/some string text",":Integer/10"
+      "@parent","#com.example.SuperClass",":S/some string text",":Integer/10"
+    ]
+  },
+  {
+    "ref": "com.example.SuperClass",
+    "target": "com.example.ExampleClass",
+    "args": [
+      ":s/Hello World",":i/153",":l/153153",":d/1.23",":f/1.53",":x/1a2b"
     ]
   },
   {
@@ -32,15 +39,15 @@
     "set": [
       {
         "name": "fieldName",
-        "value": ":String/value"
+        "value": ":Int/5"
       },
       {
         "name": "fieldName",
-        "value": "@someId"
+        "value": "@parent"
       },
       {
         "name": "fieldName",
-        "value": "#referenceClass"
+        "value": "#com.example.SuperClass"
       }
     ]
   }

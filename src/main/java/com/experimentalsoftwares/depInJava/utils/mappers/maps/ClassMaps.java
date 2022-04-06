@@ -4,6 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,7 @@ public class ClassMaps {
         else return classMaps;
     }
 
-    public ClassMap getClassMap(@NotNull Predicate<ClassMap> predicate){
-        return classMaps.stream().filter(predicate).findFirst().orElseThrow();
+    public Optional<ClassMap> getClassMap(@NotNull Predicate<ClassMap> predicate){
+        return classMaps.stream().filter(predicate).findFirst();
     }
 }

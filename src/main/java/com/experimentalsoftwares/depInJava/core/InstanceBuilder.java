@@ -3,7 +3,6 @@ package com.experimentalsoftwares.depInJava.core;
 import com.experimentalsoftwares.depInJava.utils.builders.FieldInjector;
 import com.experimentalsoftwares.depInJava.utils.builders.InstanceCreator;
 import com.experimentalsoftwares.depInJava.utils.builders.SetterInjector;
-import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,6 +13,7 @@ public class InstanceBuilder<T> {
     private Object[] deps;
     private Map<String,Object> fields;
     private Map<String,Object> setters;
+
 
     private InstanceBuilder(Class<T> cls){
         this.cls = cls;
