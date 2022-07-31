@@ -2,7 +2,7 @@ package com.experimentalsoftwares.depInJava.utils.mappers.maps;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -13,6 +13,16 @@ public class ClassMaps {
 
     public ClassMaps(List<ClassMap> classMaps) {
         this.classMaps = classMaps;
+    }
+
+    public ClassMaps()
+    {
+        this.classMaps = new ArrayList<>();
+    }
+
+    public void addClassMap(ClassMap map)
+    {
+        this.classMaps.add(map);
     }
 
     public List<ClassMap> getClassMapsBy(@Nullable Predicate<ClassMap> predicate){
