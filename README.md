@@ -1,5 +1,7 @@
 # DepIn
+
 DepIn is a Dependency Injection library for java
+---
 
 ## What Is Dependency Injection
 Dependency injection simply means that providing dependencies to spesific instances automatically.  
@@ -56,3 +58,14 @@ ExampleClass ec = InstanceBuilder.init(ExampleClass.class).withSetters(setterMap
 We can similarly inject our dependencies directly with fields.  
 We just use `withFields(Map<String,Object> setters)` chain method.  
 This is inject the spesific fields that named in map with the corresponding object arguments
+
+## Advanced
+There is better ways to use this library.  
+Firstly, let's checkout `ClassMaps` and `ClassMap` classes. You can check it out them from [ClassMaps doc] and [ClassMap doc].  
+`ClassMaps` instances holds list of several `ClassMap` instances.  
+`ClassMap` instances have some fields like `id`, `ref`, `target`,`args`,`fields` and `setters`.  
+Library uses these fields to identify classes and their dependencies.
+
+
+[ClassMaps Doc]: /docs/CLassMaps.md
+[ClassMap doc]: /docs/ClassMap.md
