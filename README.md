@@ -21,9 +21,9 @@ We use `withArgs(Object... args)` chain method for injecting arguments with cons
 
 ```Java
 ExampleClass ec = InstanceBuilder
-					.init(ExampleClass.class)
-					.withArgs("ConstructorStringArg")
-					.build();
+        .init(ExampleClass.class)
+        .withArgs("ConstructorStringArg")
+        .build();
 ```
 
 There is other ways to instantiate classes. For example, setters.
@@ -43,9 +43,9 @@ setterMap.put("setSecretString","Selam");
 Finally, we can use our map in `withSetters(Map<String,Object> setters)` chain method to create instance
 ```Java
 ExampleClass ec = InstanceBuilder
-					.init(ExampleClass.class)
-					.withSetters(setterMap)
-					.build();
+        .init(ExampleClass.class)
+        .withSetters(setterMap)
+        .build();
 
 ```
 
