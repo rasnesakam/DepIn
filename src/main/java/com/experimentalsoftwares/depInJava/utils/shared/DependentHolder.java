@@ -1,11 +1,21 @@
 package com.experimentalsoftwares.depInJava.utils.shared;
 
-import java.util.List;
-import java.util.Map;
-
 public class DependentHolder {
+
+    /**
+     * Class name of the dependent
+     */
     private Class<?> cls;
-    private Object predefined;
+
+    /**
+     * <p>Predefined instance of the dependency</p>
+     * <p></p>
+     */
+    private Object instance;
+
+    /**
+     *
+     */
     private String label;
 
     public Class<?> getCls() {
@@ -24,11 +34,11 @@ public class DependentHolder {
         this.label = label;
     }
 
-    public Object getPredefined() {
-        return predefined;
+    public Object getInstance() {
+        return instance;
     }
 
-    public void setPredefined(Object predefined) {
-        this.predefined = predefined;
+    public void setInstance(Object instance) {
+        this.instance = instance;
     }
 }

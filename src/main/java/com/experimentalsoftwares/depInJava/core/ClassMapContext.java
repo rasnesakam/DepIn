@@ -5,14 +5,32 @@ import com.experimentalsoftwares.depInJava.utils.mappers.maps.ClassMap;
 import com.experimentalsoftwares.depInJava.utils.mappers.maps.ClassMaps;
 import com.experimentalsoftwares.depInJava.utils.mappers.maps.MapBuilder;
 import com.experimentalsoftwares.depInJava.utils.shared.DependentHolder;
-import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ClassMapContext {
     private ClassMaps classMaps;
+
+    public enum InjectTypes{
+        ARG,FIELD,SET
+    }
+
+    private ClassMapContext(ClassMaps classMaps){
+        this.classMaps = classMaps;
+    }
+
+    public static ClassMapContext fromJson(String jsonPath){
+        return new ClassMapContext(MapBuilder.fromJsonMap(jsonPath));
+    }
+
+    /**
+     *
+     * @param classMapsPath
+     */
+    public void setClassMapsFromJSON(String classMapsPath){
+        this.classMaps = MapBuilder.fromJsonMap(classMapsPath);
+    }
+
 
     /**
      * <p>
@@ -53,11 +71,11 @@ public class ClassMapContext {
         DependentHolder holder = new DependentHolder();
         if (identifier.startsWith(":")){
             switch (identifier.substring(0,3)){
-                case ":d/" -> holder.setPredefined(Double.parseDouble(identifier.substring(3)));
-                case ":f/" -> holder.setPredefined(Float.parseFloat(identifier.substring(3)));
-                case ":i/" -> holder.setPredefined(Integer.parseInt(identifier.substring(3)));
-                case ":s/" -> holder.setPredefined(identifier.substring(3));
-                case ":x/" -> holder.setPredefined(Integer.parseInt(identifier.substring(3),16));
+                case ":d/" -> holder.setInstance(Double.parseDouble(identifier.substring(3)));
+                case ":f/" -> holder.setInstance(Float.parseFloat(identifier.substring(3)));
+                case ":i/" -> holder.setInstance(Integer.parseInt(identifier.substring(3)));
+                case ":s/" -> holder.setInstance(identifier.substring(3));
+                case ":x/" -> holder.setInstance(Integer.parseInt(identifier.substring(3),16));
             }
         }
         else {
@@ -103,15 +121,6 @@ public class ClassMapContext {
                     default -> classMap.target != null && classMap.target.equals(identifier.substring(1));
                 }
         );
-    }
-
-    public enum InjectTypes{
-        ARG,FIELD,SET
-    }
-
-
-    public void setClassMapsFromJSON(String classMapsPath){
-        this.classMaps = MapBuilder.fromJsonMap(classMapsPath);
     }
 
     /**
