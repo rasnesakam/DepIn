@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-
+/**
+ * <h1>DepIn</h1>
+ * <p>DepIn is useful for instantiate complex class structures</p>
+ * @author Ensar Makas
+ */
 public class DepIn {
 
     private final ClassMapContext context;
