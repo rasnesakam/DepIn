@@ -21,14 +21,16 @@ public class DepIn {
         this.context = context;
     }
 
-    private void instantiateDependents(Map<ClassMapContext.InjectTypes,List<DependentHolder>> dependents)   {
-        dependents.forEach((k,v)->{
-            for (DependentHolder holder : v){
-                if (holder.getInstance() == null){
+    private void instantiateDependents(Map<ClassMapContext.InjectTypes,List<DependentHolder>> dependents)
+    {
+        dependents.forEach((k,v)-> {
+            for (DependentHolder holder : v) {
+                if (holder.getInstance() == null) {
                     holder.setInstance(generateInstance(holder.getCls().getName()));
                 }
             }
         });
+
     }
 
     private void injectConstructor(InstanceBuilder<?> builder,
