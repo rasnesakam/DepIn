@@ -34,21 +34,12 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
-  
-  test:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 16
-      uses: actions/setup-java@v3
-      with:
-        java-version: '16'
-        distribution: 'temurin'
-    - name: Run chmod to make gradlew executable
-      run: chmod +x ./gradlew
-    - name: Build with Gradle
+    - name: Test with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: test
+    - name: Publish Test Report
+      uses: mikepenz/action-junit-report@v3
+      if: always() # always run even if the previous step fails
+      with:
+        report_paths: '**/build/test-results/test/TEST-*.xml'
