@@ -19,9 +19,6 @@ public class ClassMapContext {
         this.classMaps = classMaps;
     }
 
-    public static ClassMapContext fromJson(String jsonPath){
-        return new ClassMapContext(MapBuilder.fromJsonMap(jsonPath));
-    }
 
     /**
      *
