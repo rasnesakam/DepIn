@@ -5,6 +5,8 @@ import com.emakas.depIn.utils.mappers.maps.ClassMap;
 import com.emakas.depIn.utils.mappers.maps.ClassMaps;
 import com.emakas.depIn.utils.mappers.maps.MapBuilder;
 import com.emakas.depIn.utils.shared.DependentHolder;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -30,8 +32,9 @@ public class ClassMapContext {
      * @author Ensar Makas
      * @return New Instance that configured for json map
      */
-    public void setClassMapsFromJSON(String classMapsPath){
-        this.classMaps = MapBuilder.fromJsonMap(classMapsPath);
+    @Contract("_ -> new")
+    public static @NotNull ClassMapContext fromJson(@NotNull String jsonPath){
+        return new ClassMapContext(MapBuilder.fromJsonMap(jsonPath));
     }
 
 
