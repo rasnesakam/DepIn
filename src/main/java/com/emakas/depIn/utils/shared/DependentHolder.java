@@ -8,7 +8,7 @@ public class DependentHolder {
     private Class<?> cls;
 
     /**
-     * <p>Predefined instance of the dependency</p>
+     * <p>Predefined instances like String, integer, float, doubble etc.</p>
      * <p></p>
      */
     private Object instance;
