@@ -73,7 +73,7 @@ public class ClassMapContext {
      * @param identifier String identifier for target class
      * @return {@link DependentHolder} for holding dependent object, class and their labels
      */
-    private DependentHolder getDependent(String identifier){
+    private @NotNull DependentHolder getDependent(@NotNull String identifier){
         DependentHolder holder = new DependentHolder();
         if (identifier.startsWith(":")){
             switch (identifier.substring(0,3)){
