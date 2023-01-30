@@ -25,7 +25,13 @@ public class ClassMapContext {
 
     /**
      *
-     * @param classMapsPath
+     * <h2>
+     *     Creates new instance that configured for json map file
+     * </h2>
+     *
+     * @param jsonPath Directory of the json file
+     * @author Ensar Makas
+     * @return New Instance that configured for json map
      */
     public void setClassMapsFromJSON(String classMapsPath){
         this.classMaps = MapBuilder.fromJsonMap(classMapsPath);
@@ -33,9 +39,9 @@ public class ClassMapContext {
 
 
     /**
-     * <p>
+     * <h2>
      *     Get dependent class or objects of identified class with identifier <b>identifier</b>
-     * </p>
+     * </h2>
      * <p>
      *     If <b>identifier</b> starts with <b>":d/"</b>,<b>":f/"</b>,<b>":i/"</b>,<b>":s/"</b> or<br>
      *     <b>":x/"</b>, That means the identifier is predefined value.
@@ -103,7 +109,7 @@ public class ClassMapContext {
      * <p>
      *     If identifier starts with "#", that means the identifier represents the reference (ref) of a {@link ClassMap}
      *     <br>
-     *     Program will search {@link ClassMap} by it's ref
+     *     Program will search {@link ClassMap} by it's reference (ref)
      * </p>
      * <p>
      *     By default, program will search {@link ClassMap} by it's target
@@ -155,13 +161,18 @@ public class ClassMapContext {
     }
 
     /**
-     * <p>
+     * <h2>
      *      Gets dependents for spesific identifier. It holds dependents with injection types
+     * </h2>
+     * <p>
+     *     Collects dependent elements of the requested instance into a map that grouped by
+     *     {@link InjectTypes injection types}
      * </p>
      * @author Ensar MAKAS
      * @since 03.04.2022
-     * @param identifier
-     * @return
+     * @param identifier String that identifies requested instance
+     * @return Map that contains the dependents grouped by {@link DependentHolder dependent holders}
+     * @throws ClassBuildException Possibly throws
      */
     public Map<InjectTypes, List<DependentHolder>> getDependents(String identifier){
 
