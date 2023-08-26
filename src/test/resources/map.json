@@ -1,7 +1,7 @@
 [
   {
     "id": "example",
-    "target": "com.experimentalsoftwares.depIn.test.cases.classes.ExampleClass",
+    "target": "com.emakas.depIn.test.cases.case1.classes.ExampleClass",
     "args": [":s/Hello World"],
     "fields": [
       {
@@ -10,6 +10,26 @@
       {
         "publicDependency": ":s/Public dependency"
       }
+    ]
+  },
+  {
+    "ref": "com.emakas.depIn.test.cases.case2.repository.Repository",
+    "target": "com.emakas.depIn.test.cases.case2.repository.SimpleRepository",
+    "fields": [
+      {"context": "@context"}
+    ]
+
+  },
+  {
+    "id": "context",
+    "target": "com.emakas.depIn.test.cases.case2.dbContext.DbContext",
+    "args": [":s/postgres://YourUserName:YourPassword@YourHostname:5432/YourDatabaseName"]
+  },
+  {
+    "ref": "com.emakas.depIn.test.cases.case2.service.Service",
+    "target": "com.emakas.depIn.test.cases.case2.service.SimpleService",
+    "fields": [
+      {"repository": "#com.emakas.depIn.test.cases.case2.repository.Repository"}
     ]
   }
 ]

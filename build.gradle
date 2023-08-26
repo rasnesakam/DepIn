@@ -9,7 +9,7 @@ java {
     }
 }
 
-group 'org.example'
+group 'org.emakas'
 version '1.0-alpha'
 
 repositories {
