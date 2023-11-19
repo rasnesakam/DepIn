@@ -63,12 +63,7 @@ We just use `withFields(Map<String,Object> setters)` chain method.
 This is inject the spesific fields that named in map with the corresponding object arguments
 
 ## Advanced
-There is better ways to use this library.  
-Firstly, let's checkout `ClassMaps` and `ClassMap` classes. You can check it out them from [ClassMaps doc] and [ClassMap doc].  
-`ClassMaps` instances holds list of several `ClassMap` instances.  
-`ClassMap` instances have some fields like `id`, `ref`, `target`,`args`,`fields` and `setters`.  
-Library uses these fields to identify classes and their dependencies.
-
+For more detailed instructions, you can visit online documentation [here](https://rasnesakam.gitbook.io/depin/advanced)
 
 [ClassMaps Doc]: /docs/CLassMaps.md
 [ClassMap doc]: /docs/ClassMap.md
