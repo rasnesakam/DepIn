@@ -1,6 +1,7 @@
 package com.experimentalsoftwares.depInJava.utils.builders;
 
 import com.experimentalsoftwares.depInJava.utils.exceptions.ClassBuildException;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -20,6 +21,13 @@ public class InstanceCreator<T> {
         return this;
     }
 
+    /**
+     * <h1>InstanceCreator::create()</h1>
+     * <p>
+     *     Creates an instance of the requested class Type <code>T</code>
+     * </p>
+     * @return Type T is represents the class that requested
+     */
     public T create(){
         if (cls == null)
             throw new ClassBuildException("Target class must be specified");
@@ -38,7 +46,17 @@ public class InstanceCreator<T> {
         }
     }
 
-    private Constructor<T> getConstructor(Object[] args) {
+    /**
+     * <h1>InstanceCreator::getConstructor(Object[] args)</h1>
+     * <p>
+     *     Returns a Constructor object that reflects the specified
+     *     public constructor of the class represented by this Class object.
+     * </p>
+     * @param args
+     * @return {@link java.lang.reflect.Constructor Constructor} object that
+     * represents the constructor with parameters <code>args</code>
+     */
+    private @NotNull Constructor<T> getConstructor(Object[] args) {
         Class<?>[] types = args != null ? new Class<?>[args.length] : new Class<?>[0];
         for (int i = 0; i < types.length; i++)
             types[i] = args[i].getClass();
